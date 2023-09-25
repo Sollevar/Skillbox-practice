@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom items</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/choices.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d6acf34f-eef3-4ddc-b4bb-acaca7e47484&lang=ru_RU"
+        type="text/javascript"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="Js/inputmask.js"></script>
+</head>
+
+<body>
+    <div class="container flex">
+        <form action="" class="form">
+            <div class="form__checkbox next__item">
+                <h3 class="form__header">Категории:</h3>
+                <label for="dino">
+                    <input type="checkbox" id="dino" class="input-check" name="dino">
+                    Динозавры
+                    <span></span>
+                </label>
+                <label for="bear">
+                    <input type="checkbox" id="bear" class="input-check" name="bear">
+                    Медведи
+                    <span></span>
+                </label>
+                <label for="cosyli">
+                    <input type="checkbox" id="cosyli" class="input-check" name="cosyli">
+                    Косули
+                    <span></span>
+                </label>
+                <label for="fox">
+                    <input type="checkbox" id="fox" class="input-check" name="fox">
+                    Лисы
+                    <span></span>
+                </label>
+                <label for="wolf">
+                    <input type="checkbox" id="wolf" class="input-check" name="wolf">
+                    Волки
+                    <span></span>
+                </label>
+                <label for="olen">
+                    <input type="checkbox" id="olen" class="input-check" name="olen">
+                    Олени и лоси
+                    <span></span>
+                </label>
+            </div>
+            <div class="form__select next__item">
+                <select name="select" id="selectCustom">
+                    <option value="" class="select__item" selected>Материал</option>
+                    <option value="Древесина" class="select__item">Древесина</option>
+                    <option value="Металл" class="select__item">Металл</option>
+                    <option value="Камень" class="select__item">Камень</option>
+                    <option value="Камень" class="select__item">Пластик</option>
+                    <option value="Композитный" class="select__item">Композитный</option>
+                    <option value="Гипс" class="select__item">Гипс</option>
+                </select>
+            </div>
+        </form>
+        <div class="yandex-map next__item">
+            <h2 class="title-h2">В качестве адреса для маркера используйте: Франция, Иль-де-Франс, Париж, X округ
+                Парижа, улица дю Фобур Сен Дени 54</h2>
+            <div id="map" class="container__map">
+            </div>
+        </div>
+        <div data-simplebar class="container__descr next__item">
+            <p class="descr">
+                Сложно сказать, почему многие известные личности представлены в исключительно положительном свете.
+                Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими
+                инстанциями.
+                Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет
+                собой
+                интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая
+                примерно следующее:
+                непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в
+                целом, однако конкретные выводы,
+                разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое
+                развитие,
+                а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных
+                требований.
+            </p>
+        </div>
+        <form class="feedback next__item" action="">
+            <label for="basic_name">
+                <input class="feedback__item" id="basic_name" type="text" placeholder="Имя*" name="name" />
+            </label>
+            <label for="basic_phone">
+                <input class="feedback__item" id="basic_phone" type="tel" placeholder="Телефон*" name="phone" />
+            </label>
+            <label for="basic_email">
+                <input class="feedback__item" id="basic_email" type="email" placeholder="E-mail*" name="mail" />
+            </label>
+            <button type="submit" class="feedback_btn btn-reset">Заказать</button>
+        </form>
+        <div class="content__wrapper">
+            <div class="content content-1">
+                <span class="content__descr">
+                    Следует отметить, что социально-экономическое развитие способствует повышению качества
+                    переосмысления внешнеэкономических политик.
+                </span>
+                <span class="marker">i</span>
+                <div class="popup">
+                    Глава 2, страница 176
+                    <div class="popup__footer"></div>
+                </div>
+            </div>
+            <div class="content content-2">
+                <span class="content__descr">
+                    Следует отметить, что социально-экономическое развитие способствует повышению качества
+                    переосмысления внешнеэкономических политик.
+                </span>
+                <span class="marker">i</span>
+                <div class="popup">
+                    Глава 2, страница 176
+                    <div class="popup__footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Js/index.js"></script>
+</body>
+
+</html>
