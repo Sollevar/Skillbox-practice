@@ -1,0 +1,185 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: local("OpenSansBold"), url("../fonts/OpenSansBold.woff2") format("woff2"),
+    url("../fonts/OpenSansBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: local("OpenSansRegular"), url("../fonts/OpenSansRegular.woff2") format("woff2"),
+    url("../fonts/OpenSansRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  min-width: 320px;
+  background-color: #fff;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 57px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.section-offset {
+  padding-top: 63px;
+}
+
+/* top */
+
+.top {
+  background-color: rgba(255, 246, 237, 1);
+  padding-bottom: 42px;
+}
+
+.top__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: 'OpenSans';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.top__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
+}
+
+.card {
+  max-width: 375px;
+}
+
+.card__title {
+  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-family: 'OpenSans';
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 41px;
+  color: rgba(0, 0, 0, 1)
+}
+
+.card__title span {
+  color: rgba(255, 122, 0, 1);
+}
+
+.card__descr {
+  margin: 0;
+  font-family: 'OpenSans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 1)
+}
+
+/* bottom */
+
+.bottom {
+  padding-bottom: 60px;
+}
+
+.bottom__container{
+  display: flex;
+}
+
+.bottom__left{
+  max-width: 600px;
+  margin-right: 65px;
+}
+
+.bottom__title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-family: 'OpenSans';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.bottom__descr {
+  max-width: 570px;
+  margin: 0;
+  font-family: 'OpenSans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.bottom__right{
+  position: relative;
+}
+
+.bottom__figure{
+  position: absolute;
+  top: -37px;
+}
+
+.bottom__logotips{
+  position: absolute;
+  top: 30px;
+  left: 110px;
+}
+
+.bottom__list--1{
+  margin-bottom: 30px;
+}
+
+.list__item--1:not(:last-child){
+  margin-right: 90px;
+}
+
+.bottom__list--2{
+  padding-left: 70px;
+}
+
+.list__item--2:not(:last-child){
+  margin-right: 90px;
+}
