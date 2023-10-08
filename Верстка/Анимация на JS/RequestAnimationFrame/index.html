@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .block{
+        width: 200px;
+        height: 200px;
+        background-color: rosybrown;
+    }
+</style>
+<body>
+    <div class="block">
+
+    </div>
+    <script>
+
+        // let animationId = null;
+        function test(){
+            console.count('test')
+            animationId = requestAnimationFrame(test)
+        }
+
+        animationId = requestAnimationFrame(test)
+
+        document.querySelector('.block').addEventListener('click', function(){
+            cancelAnimationFrame(animationId)
+        })
+
+
+    </script>
+</body>
+</html>
