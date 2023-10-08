@@ -6,4 +6,5 @@
 [Документация Just-validate] (https://just-validate.dev/docs/intro) <br>
 [Документация Simplebar] (https://github.com/Grsmto/simplebar/tree/master/packages/simplebar) <br>
 [Документация Smooth-scroll] (https://github.com/cferdinandi/smooth-scroll) <br>
+[Документация GreenSock] (https://greensock.com/docs/v3/GSAP)
 
