@@ -1,0 +1,102 @@
+.footer {
+    padding: 25px 0;
+    background-color: var(--dark-color);
+
+    @include small-tablet {
+        padding-bottom: 100px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @include small-tablet {
+            position: relative;
+            justify-content: center;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+
+        @include small-tablet {
+            position: absolute;
+            top: 90px;
+            padding: 14px 0;
+            width: 100%;
+            align-items: center;
+            background-color: #4A4A4A;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 6px;
+
+        @include small-tablet {
+            max-width: 112px;
+        }
+    }
+
+    &__copy {
+        font-family: var(--font-family-second);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: rgba(233, 233, 233, 1);
+    }
+
+    &__descr {
+        margin: 0;
+        max-width: 361px;
+        font-family: var(--font-family-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: var(--text-color);
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        margin-bottom: 8px;
+        font-family: var(--font-family-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: var(--text-color);
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-link svg path {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .social-link:focus svg path {
+        fill: var(--orange-color);
+    }
+
+    .social-link:hover svg path {
+        fill: var(--brown-color);
+    }
+
+    .social-link:active svg path {
+        fill: var(--active-color);
+    }
+
+    .social-link:not(:last-child) {
+        margin-right: 20px;
+    }
+}

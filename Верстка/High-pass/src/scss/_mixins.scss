@@ -1,0 +1,8 @@
+@mixin primaryBtn {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: var(--color-white);
+    background-color: var(--orange-color);
+}

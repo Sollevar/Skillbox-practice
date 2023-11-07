@@ -1,0 +1,138 @@
+.about {
+    background-color: var(--dark-color);
+
+    &__title {
+        margin: 0;
+        margin-bottom: 5px;
+        padding-top: 30px;
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 31px;
+        letter-spacing: 0em;
+        color: var(--color-white);
+
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+
+        @include small-tablet {
+            gap: 18px;
+        }
+    }
+
+    &__descr {
+        margin: 0;
+        grid-column: 6 span;
+        grid-row: 1 / 2;
+        font-family: var(--font-family-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: var(--text-color);
+
+        @include small-tablet {
+            grid-column: 12 span;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+
+    &__distribution {
+        grid-column: 6 span;
+
+        @include small-tablet {
+            grid-column: 12 span;
+        }
+    }
+
+    &__image {
+        margin-bottom: 25px;
+    }
+
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 16px;
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22px;
+        color: var(--color-white);
+
+        @include small-tablet {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        label {
+            width: 100%;
+            margin-right: 30px;
+
+            @include tablet {
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+        }
+
+        label input {
+            width: 100%;
+            max-width: 474px;
+            padding: 15px 0 15px 23px;
+            border: none;
+            outline: 1px solid transparent;
+            font-family: var(--font-family-main);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            color: var(--text-color);
+            background-color: rgba(74, 74, 74, 1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus::placeholder {
+            color: var(--orange-color)
+        }
+
+        input:hover {
+            color: var(--text-color);
+            outline: 1px solid var(--orange-color);
+        }
+
+        .send-btn {
+            @include primaryBtn;
+            padding: 15px 22px;
+            outline: 3px solid transparent;
+            transition: background-color 0.3s ease-in-out, outline 0.1s linear;
+
+            @include big-desktop {
+                align-self: flex-start;
+            }
+        }
+
+        .send-btn:focus {
+            background-color: var(--brown-color);
+        }
+
+        .send-btn:hover {
+            outline: 3px solid var(--active-color);
+            background-color: var(--orange-color);
+        }
+
+        .send-btn:active {
+            background-color: var(--active-color);
+        }
+    }
+}

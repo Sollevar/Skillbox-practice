@@ -1,0 +1,20 @@
+// Colors
+:root {
+    --font-family-main: "Roboto", sans-serif;
+    --font-family-second:"TTFirsNeue",sans-serif;
+    --content-width: 1290px;
+    --container-offset: 31px;
+    --container: calc(var(--content-width) + (var(--container-offset) * 2));
+    --section-offset:68px;
+    // colors
+    --color-black: #000;
+    --color-white: rgba(255, 255, 255, 1);
+    --orange-color:rgba(255, 110, 48, 1);
+    --active-color:rgba(206, 67, 7, 1);
+    --brown-color:rgba(188, 87, 43, 1);
+    --dark-color:#202020;
+    --text-color:rgba(202, 202, 202, 1);
+    --grey-color:rgba(153, 153, 153, 1);
+    --error-color:rgba(240, 102, 102, 1);
+
+}

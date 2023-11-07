@@ -1,0 +1,234 @@
+.hero {
+
+    padding-top: 40px;
+
+    @include tablet {
+        padding-top: 85px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            picture img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: left;
+        max-height: 630px;
+        background-image: url(../images/hero-left.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 6 span;
+        grid-row: 2 span;
+
+        @include tablet {
+            background-image: url(../images/hero-img-1-small_tablet.jpg);
+            background-position: center;
+        }
+
+        @include small-tablet {
+            background-image: url(../images/left-img-mobile.jpg);
+            grid-column: 12 span;
+            height: 490px;
+        }
+
+        @include mobile {
+            grid-column: 10 span;
+            width: 278px;
+            height: 422px;
+        }
+    }
+
+    &__hashtag {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 7px 15px;
+        font-family: var(--font-family-main);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: var(--color-white);
+        background-color: var(--dark-color);
+
+        @include small-tablet {
+            top: 7px;
+            right: 7px;
+            padding: 4px 7px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+    }
+
+    &__content {
+        padding-left: 65px;
+        padding-bottom: 60px;
+
+        @include tablet {
+            padding-left: 30px;
+        }
+
+        @include small-tablet {
+            padding-left: 28px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__info {
+        display: block;
+        font-family: var(--font-family-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        color: var(--color-white);
+        margin-bottom: 3px;
+
+        @include small-tablet {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        max-width: 427px;
+        font-family: var(--font-family-second);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 37px;
+        color: var(--color-white);
+
+        @include small-tablet {
+            max-width: 169px;
+            font-size: 24px;
+            line-height: 26px;
+        }
+    }
+
+    &__btn {
+        @include primaryBtn;
+        padding: 15px 22px;
+        outline: 3px solid transparent;
+        transition: background-color 0.3s ease-in-out, outline 0.1s linear;
+
+        @include small-tablet {
+            padding: 12px 22px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__btn:focus {
+        background-color: var(--brown-color);
+    }
+
+    &__btn:hover {
+        outline: 3px solid var(--active-color);
+        background-color: var(--orange-color);
+    }
+
+    &__btn:active {
+        background-color: var(--active-color);
+    }
+
+
+    &__master {
+        grid-column: 6 span;
+
+        @include small-tablet {
+            grid-column: 12 span;
+            grid-row: 3;
+        }
+
+        @include mobile {
+            grid-column: 10 span;
+        }
+    }
+
+    .master__title {
+        margin: 0;
+        margin-bottom: 18px;
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 25px;
+        color: var(--dark-color);
+
+        @include big-desktop {
+            font-size: 21px;
+        }
+
+        @include tablet {
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        @include small-tablet {
+            font-size: 18px;
+            line-height: 19px;
+        }
+    }
+
+    .hero__img--1 {
+        grid-column: 3 span;
+
+        @include tablet {
+            picture img {
+                width: 100%;
+                height: 186px;
+            }
+        }
+
+        @include small-tablet {
+            grid-column: 6 span;
+            grid-row: 4;
+
+            picture img {
+                height: auto;
+            }
+        }
+
+        @include mobile {
+            grid-column: 5 span;
+        }
+
+
+    }
+
+    .hero__img--2 {
+        grid-column: 3 span;
+
+        @include tablet {
+            picture img {
+                width: 100%;
+                height: 186px;
+            }
+        }
+
+        @include small-tablet {
+            grid-column: 6 span;
+            grid-row: 4;
+
+            picture img {
+                height: auto;
+            }
+        }
+
+        @include mobile {
+            grid-column: 5 span;
+        }
+    }
+}

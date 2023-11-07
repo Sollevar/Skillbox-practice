@@ -1,0 +1,101 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: var(--font-family-main);
+    background-color: var(--color-white);
+    font-weight: 400;
+}
+
+.container {
+    max-width: var(--container);
+    padding: 0 var(--container-offset);
+    margin: 0 auto;
+
+    @include small-tablet{
+        padding: 0 20px;
+    }
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input-reset {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+        display: none;
+    }
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.section-offset {
+    padding-bottom: var(--section-offset);
+}
+
+.section-title {
+    margin: 0;
+    font-family: var(--font-family-second);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+
+    @include small-tablet {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+.just-validate-error-label {
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    font-family: var(--font-family-main);
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    color: var(--error-color);
+}
