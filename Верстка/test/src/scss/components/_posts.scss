@@ -1,0 +1,82 @@
+.posts {
+    padding-top: 60px;
+    padding-bottom: 75px;
+
+    @include tablet{
+        padding-top: 36px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 40px;
+        font-family: var(--font-family);
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 28px;
+        color: var(--black-color);
+
+        @include tablet{
+            font-size: 23px;
+        }
+    }
+
+    &__list{
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__descr {
+        margin: 0;
+        margin-top: 20px;
+        max-width: 180px;
+        font-family: var(--font-family);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: var(--dark-color);
+    }
+
+    &__slider{
+        display: none;
+
+        @include tablet{
+            display: block;
+            max-width: 280px;
+            height: 390px;
+        }
+
+        .slide__content{
+            picture img{
+                width: 100%;
+            }
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 0;
+        }
+
+        .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+            margin: 0;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child){
+            margin-right: 20px;
+        }
+
+        .swiper-pagination-bullet-active{
+            width: 15px;
+            height: 15px;
+            background-color: var(--accent-color);
+        }
+    }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путь в JavaScript</title>
+    <link rel="preload" href="fonts/Consolas-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSansRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <span class="header__line"></span>
+            <h1 class="header__title">
+                Путь JavaScript
+            </h1>
+            <span class="header__line"></span>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__img">
+                    <picture>
+                        <source srcset="images/hero-img.webp" type="image/webp">
+                        <img loading="lazy" src="images/hero-img.jpg" class="image" alt="Фото">
+                    </picture>
+                    <div class="hero__day">
+                        <span class="hero__number">
+                            12 <br> Апреля
+                        </span>
+                        <svg width="5" height="5" viewbox="0 0 5 5">
+                            <use xlink:href="images/svg/sprite.svg#Triangle"></use>
+                        </svg>
+                    </div>
+                    <svg width="12" height="9" viewbox="0 0 12 9">
+                        <use xlink:href="images/svg/sprite.svg#white_triangle"></use>
+                    </svg>
+                </div>
+                <p class="hero__descr">
+                    Можно выделить три основных направления для прогресса JavaScript
+                </p>
+                <span class="hero__line"></span>
+            </div>
+            <div class="hero__img--mobile">
+                <div class="hero__scroll" data-simplebar>
+                    <picture>
+                        <source srcset="images/hero-img.webp" type="image/webp">
+                        <img loading="lazy" src="images/hero-img.jpg" class="image" alt="Фото">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="quote">
+            <div class="container quote__container">
+                <h2 class="quote__title">
+                    Серверный JavaScript
+                </h2>
+                <svg width="34" height="34" viewbox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="34" height="34" fill="url(#pattern0)" />
+                    <defs>
+                        <pattern id="pattern0" patterncontentunits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_311_5" transform="scale(0.0294118)" />
+                        </pattern>
+                        <image id="image0_311_5" width="34" height="34"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAACrElEQVRYhdWYe08TQRTFf06LUIXSFiUqvhE1fv/vYtQqESKJPAQpSoE+zG3Omsk4s7MVivH81ezM3HvmPs7d7Q2mQx1oAU2gASwAThZGQB84BY6BI2BQ1XpVIovAA6A9xZkxcAjsACeXJTIPPAE6FZ2n8A34DJz9DRFzvg7ULkmiwBD4KFJ/IOVkDXju5f8qYLZWlLJeFSJG4tEVEgixHCMTEukoErOGkfmpDpvAD70V5vo1kCiwLp8T1IKF24lDphHfpQ9nMlBW6GfSkROl4WZkj5OdAyRQSCdSLboLbAXiVFcKwzPWGZvAfvB8CdiIEOrI90kRkadSyhBfZXgUPB+pDRelrujmbxWJEOcSt7uRTrRLHTj9aEcODxSJFMxxV1Ew7MXa0kNfohbCfNedZkcs38eekxQGIoBunMNeZP6Y75bTAIvhvIJhvChU2T9OzJ2mS9QGXiFXxbT7fTScV2whlitKfNEJsTor2+9jwZU4m5Pc57Ck9VXgVmZvPbHH5W5czJ2UeM2p2NGF3pTUnOFOasF05H5m1DdlYKwWHHtrDwPHTlphCn0RvH/Y2otELQ2djOdgdfQsCGtDl4ihHRmea/5sCdB3/gTMYN9rVYvgy8y82fR+tzL1duokXDn8AD5pj515VdL2hm0NSTQGNjL2j+uaDeOS21kU3mm+1ESirCC39MKMOup1pgbN91FdknuYmL72/INIzItEWYt2vcm7oleLXGeaj0FRwTsJIrsi0ZbRMvU810Q2x4+BexkCBSbR89NhxReSudBsqKqaPZEtqx8fRvw9Qe7M4WoQytoURlH65iruHYrEMCRiD/rK7XWg60/isJpPVcXLMyayrfr7jVhb9WZMxkh8CR+m+run747WFX7tDZWO3djif/ER7uOf/y0RYjZ/1AC/AEJpmfOWmwhsAAAAAElFTkSuQmCC" />
+                    </defs>
+                </svg>
+                <div class="quote__content">
+                    <p class="quote__descr">
+                        Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический
+                        интерфейс и думают, что он и есть система. Они определяют систему в терминах графического
+                        интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают
+                        важнейшего принципа: ввод/вывод не важен.
+                        <br>
+                        <br>
+                        <span>— Р. Мартин</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="advertisement">
+            <div class="container advertisement__container">
+                <span class="advertisement__link">
+                    Реклама на <u>blabla.com</u>
+                </span>
+                <picture>
+                    <source srcset="images/advertisement-img-mobile.jpg" media="(max-width:1023px)">
+                    <source srcset="images/advertisement-img.webp" type="image/webp">
+                    <img loading="lazy" src="images/advertisement-img.jpg" class="image" alt="Фото">
+                </picture>
+            </div>
+        </section>
+        <section class="conclusion">
+            <div class="container conclusion__container">
+                <h2 class="conclusion__title">
+                    Заключение
+                </h2>
+                <p class="conclusion__descr">
+                    Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический
+                    субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на
+                    то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует
+                    мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
+                </p>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container feedback__container">
+                <span class="feedback__descr">
+                    Оцените статью
+                </span>
+                <ul class="feedback__stars list-reset" data-total-star="0">
+                    <li class="feedback__star" data-star="5">
+                        <svg width="25" height="23" viewbox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.5 18.75L5.15268 22.6127L6.5559 14.4314L0.611794 8.63729L8.82634 7.44364L12.5 0L16.1737 7.44364L24.3882 8.63729L18.4441 14.4314L19.8473 22.6127L12.5 18.75Z"
+                                fill="#979797" />
+                        </svg>
+                    </li>
+                    <li class="feedback__star" data-star="4">
+                        <svg width="25" height="23" viewbox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.5 18.75L5.15268 22.6127L6.5559 14.4314L0.611794 8.63729L8.82634 7.44364L12.5 0L16.1737 7.44364L24.3882 8.63729L18.4441 14.4314L19.8473 22.6127L12.5 18.75Z"
+                                fill="#979797" />
+                        </svg>
+                    </li>
+                    <li class="feedback__star" data-star="3">
+                        <svg width="25" height="23" viewbox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.5 18.75L5.15268 22.6127L6.5559 14.4314L0.611794 8.63729L8.82634 7.44364L12.5 0L16.1737 7.44364L24.3882 8.63729L18.4441 14.4314L19.8473 22.6127L12.5 18.75Z"
+                                fill="#979797" />
+                        </svg>
+                    </li>
+                    <li class="feedback__star" data-star="2">
+                        <svg width="25" height="23" viewbox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.5 18.75L5.15268 22.6127L6.5559 14.4314L0.611794 8.63729L8.82634 7.44364L12.5 0L16.1737 7.44364L24.3882 8.63729L18.4441 14.4314L19.8473 22.6127L12.5 18.75Z"
+                                fill="#979797" />
+                        </svg>
+                    </li>
+                    <li class="feedback__star" data-star="1">
+                        <svg width="25" height="23" viewbox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.5 18.75L5.15268 22.6127L6.5559 14.4314L0.611794 8.63729L8.82634 7.44364L12.5 0L16.1737 7.44364L24.3882 8.63729L18.4441 14.4314L19.8473 22.6127L12.5 18.75Z"
+                                fill="#979797" />
+                        </svg>
+                    </li>
+                </ul>
+                <span class="feedback__descr">
+                    Добавить комментарий к книге
+                </span>
+                <form action="" class="feedback__form">
+                    <label class="input" for="name">
+                        <input class="input-reset input-name" name="name" id="name" type="text" required
+                            placeholder="Имя">
+                    </label>
+                    <label class="input" for="email">
+                        <input class="input-reset input-email" name="email" id="email" type="email" required
+                            placeholder="E-mail">
+                    </label>
+                    <div class="books">
+                        <div class="book-current">
+                            <span class="book__select">Выберите книгу</span>
+                        </div>
+                        <ul class="books-list list-reset">
+                            <li class="book-item"><span class="book-name">JavaScript ниндзя</span></li>
+                            <li class="book-item"><span class="book-name">Pragmatic Guide to JavaScript</span></li>
+                            <li class="book-item"><span class="book-name">Pro JavaScript Techniques</span></li>
+                            <li class="book-item"><span class="book-name">Выразительный JavaScript</span></li>
+                        </ul>
+                    </div>
+                    <label class="textarea" for="comment">
+                        <textarea class="input-reset" name="comment" id="comment" minlength="3" required
+                            placeholder="Ваш отзыв"></textarea>
+                    </label>
+                    <button class="form__btn btn-reset">
+                        ОТПРАВИТЬ
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="posts">
+            <div class="container posts__container">
+                <h2 class="posts__title">
+                    Похожие посты
+                </h2>
+                <ul class="posts__list list-reset flex">
+                    <li class="posts__item">
+                        <picture>
+                            <source srcset="images/react.webp" type="image/webp">
+                            <img loading="lazy" src="images/react.jpg" class="image" alt="Фото">
+                        </picture>
+                        <p class="posts__descr">
+                            События жизненного цикла ReactJS
+                        </p>
+                    </li>
+                    <li class="posts__item">
+                        <picture>
+                            <source srcset="images/grid.webp" type="image/webp">
+                            <img loading="lazy" src="images/grid.jpg" class="image" alt="Фото">
+                        </picture>
+                        <p class="posts__descr">
+                            CSS Grids. Полное руководство
+                        </p>
+                    </li>
+                    <li class="posts__item">
+                        <picture>
+                            <source srcset="images/javascript.webp" type="image/webp">
+                            <img loading="lazy" src="images/javascript.jpg" class="image" alt="Фото">
+                        </picture>
+                        <p class="posts__descr">
+                            Асинхронность в JavaScript
+                        </p>
+                    </li>
+                </ul>
+                <div class="swiper posts__slider">
+                    <div class="swiper-wrapper posts__wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide__content">
+                                <picture>
+                                    <source srcset="images/react.webp" type="image/webp">
+                                    <img loading="lazy" src="images/react.jpg" class="image" alt="Фото">
+                                </picture>
+                                <p class="posts__descr">
+                                    События жизненного цикла ReactJS
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide__content">
+                                <picture>
+                                    <source srcset="images/grid.webp" type="image/webp">
+                                    <img loading="lazy" src="images/grid.jpg" class="image" alt="Фото">
+                                </picture>
+                                <p class="posts__descr">
+                                    CSS Grids. Полное руководство
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide__content">
+                                <picture>
+                                    <source srcset="images/javascript.webp" type="image/webp">
+                                    <img loading="lazy" src="images/javascript.jpg" class="image" alt="Фото">
+                                </picture>
+                                <p class="posts__descr">
+                                    Асинхронность в JavaScript
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination posts__pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+:root {
+    --font-family: "Consolas", sans-serif;
+    --black-color: #000;
+    --white-color: #fff;
+    --content-width: 738px;
+    --container-offset: 20px;
+    --container: calc(var(--content-width) + (var(--container-offset) * 2));
+    --accent-color: #0062FF;
+    --dark-color: #202326;
+    --grey-color: #DCDCDC;
+    --Open-sans: "OpenSans", sans-serif;
+
+}

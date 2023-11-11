@@ -1,0 +1,267 @@
+.feedback {
+    padding: 40px 0;
+    background-color: var(--grey-color);
+
+    label {
+        position: relative;
+    }
+
+    &__descr {
+        margin-bottom: 15px;
+        display: block;
+        font-family: var(--font-family);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+
+    &__stars {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    &__stars[data-total-star="1"] &__star:nth-child(n+5),
+    &__stars[data-total-star="2"] &__star:nth-child(n+4),
+    &__stars[data-total-star="3"] &__star:nth-child(n+3),
+    &__stars[data-total-star="4"] &__star:nth-child(n+2),
+    &__stars[data-total-star="5"] &__star:nth-child(n+1) {
+        svg path {
+            fill: #FFB400;
+        }
+    }
+
+
+    &__star {
+        cursor: pointer;
+    }
+
+
+    &__star:hover,
+    &__star:hover~&__star {
+        transition: all 0.2s ease-in-out;
+
+        svg path {
+            fill: #4d4d4d;
+        }
+    }
+
+    &__star:not(:last-child) {
+        margin-left: 10px;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        row-gap: 20px;
+        column-gap: 30px;
+
+        @include tablet {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 10px;
+            column-gap: 0px;
+        }
+
+        .input {
+            grid-row: 1;
+            width: 100%;
+
+            @include tablet {
+                &:first-child {
+                    grid-row: 1;
+                }
+
+                &:nth-child(2) {
+                    grid-row: 2;
+                }
+            }
+
+            input {
+                padding: 18px 22px;
+                width: 100%;
+                border-radius: 6px;
+                font-family: Arial;
+                font-size: 14px;
+                line-height: 15px;
+                color: #222222;
+
+                &::placeholder {
+                    font-family: Arial;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: #777777;
+                }
+
+                &:focus {
+                    outline: 2px solid #7F7F7F;
+                }
+
+                &:hover {
+                    outline: 2px solid #7F7F7F;
+                }
+            }
+
+        }
+
+        .textarea {
+            grid-row: 2;
+            grid-column: 1 / 3 span;
+            width: 100%;
+
+            @include tablet{
+                grid-row: 4;
+            }
+
+            textarea {
+                padding: 10px;
+                width: 100%;
+                height: 120px;
+                border-radius: 6px;
+                resize: none;
+
+                &:focus {
+                    outline: 2px solid #7F7F7F;
+                }
+
+                &:hover {
+                    outline: 2px solid #7F7F7F;
+                }
+
+                &::placeholder {
+                    padding-top: 5px;
+                    padding-left: 9px;
+                    font-family: Arial;
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: #777777;
+                }
+            }
+        }
+
+        .form__btn {
+            grid-row: 3;
+            padding: 14px 70px;
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 16px;
+            color: var(--white-color);
+            background-color: var(--accent-color);
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: rgba(0, 98, 255, 0.7);
+            }
+
+            @include tablet{
+                grid-row: 5;
+                max-width: 280px;
+            }
+
+        }
+
+        .books {
+
+            @include tablet {
+                position: relative;
+                grid-row: 3;
+            }
+
+        }
+
+        .book-current {
+            position: relative;
+            padding: 18px 22px;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: #fff;
+
+            .book__select {
+                font-family: Arial;
+                font-size: 14px;
+                line-height: 15px;
+                color: #777777;
+            }
+
+            &:hover {
+                outline: 2px solid #7F7F7F;
+            }
+
+            &::after {
+                position: absolute;
+                top: 20px;
+                right: 22px;
+                content: "";
+                height: 12px;
+                width: 12px;
+                background-image: url(../images/dropdown.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform: rotate(-180deg);
+            }
+        }
+
+        .books.books-active {
+            .book-current {
+                &::after {
+                    top: 22px;
+                    transform: rotate(0deg);
+                }
+            }
+
+            .books-list {
+                display: block;
+                z-index: 10;
+
+                @include tablet {
+                    width: 100%;
+                }
+            }
+        }
+
+        .books-list {
+            position: absolute;
+            margin-top: 10px;
+            display: none;
+
+            .book-item {
+                position: relative;
+                padding: 17px 15px 17px 23px;
+                cursor: pointer;
+                background-color: var(--white-color);
+
+                .book-name {
+                    font-family: Arial;
+                    font-size: 14px;
+                    line-height: 15px;
+                    color: #222222;
+                }
+
+                &:hover {
+                    background-color: #EDEDED
+                }
+
+                &:hover::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: 7px;
+                    height: 100%;
+                    background-color: var(--accent-color);
+                }
+            }
+        }
+    }
+
+    .just-validate-error-label {
+        position: absolute;
+        font-size: 12px;
+        top: 3px;
+        left: 21px;
+        color: red !important;
+    }
+}

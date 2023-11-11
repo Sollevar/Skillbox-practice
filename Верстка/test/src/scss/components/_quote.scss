@@ -1,0 +1,63 @@
+.quote {
+    padding-top: 55px;
+    padding-bottom: 45px;
+
+    @include tablet {
+        padding-top: 35px;
+        padding-bottom: 56px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 30px;
+        font-family: var(--font-family);
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 36px;
+
+        @include tablet {
+            margin-bottom: 20px;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 36px;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 61px;
+    }
+
+    &__descr {
+        margin: 0;
+        padding-left: 58px;
+        font-family: var(--Open-sans);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #1A1A1A;
+
+        @include tablet {
+            padding-left: 52px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        span {
+            font-family: var(--Open-sans);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #777777;
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.conclusion {
+    padding-top: 45px;
+    padding-bottom: 74px;
+
+    @include tablet {
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 26px;
+        font-family: var(--font-family);
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 36px;
+        color: var(--black-color);
+
+        @include tablet {
+            margin-bottom: 21px;
+            font-size: 21px;
+        }
+    }
+
+    &__descr {
+        margin: 0;
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--dark-color);
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}

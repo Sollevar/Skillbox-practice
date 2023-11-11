@@ -1,0 +1,17 @@
+@import 'vars';
+@import 'fonts';
+@import 'mixins';
+@import 'breakpoints';
+// подключение шрифта
+@include font-face("Consolas", "../fonts/Consolas-Bold", 700, bold);
+@include font-face("OpenSans", "../fonts/OpenSansRegular", 400, normal);
+@import 'setting';
+@import './components/header';
+@import './components/hero';
+@import './components/quote';
+@import './components/advertisement';
+@import './components/conclusion';
+@import './components/feedback';
+@import './components/posts';
+@import './components/footer';
+
