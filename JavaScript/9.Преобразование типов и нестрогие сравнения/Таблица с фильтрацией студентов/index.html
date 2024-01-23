@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+   <div class="container">
+    <div class="sort-btns">
+        <h2 class="sort__title title--h2">
+            Сортировка
+        </h2>
+        <button id="sort-fio" class="add btn-reset">Сортировать по <br> Фио</button>
+        <button id="sort-faculty" class="add btn-reset">Сортировать по факультету</button>
+        <button id="sort-birth" class="add btn-reset">Сортировать по дате рождения</button>
+        <button id="sort-start" class="add btn-reset">Сортировать по году обучения</button>
+    </div>
+    <form action="#" id="form-filter" class="form-filter">
+        <h2 class="filter__title title--h2">
+            Фильтрация
+        </h2>
+        <input id="filter-fio" type="text" placeholder="Фио">
+        <input id="filter-faculty" type="text" placeholder="Факультет">
+        <input id="filter-age" type="text" placeholder="Возраст">
+        <input id="filter-start" type="text" placeholder="Год начала обучения">
+    </form>
+    <h1 class="title">Список студентов</h1>
+    <table class="table table-dark">
+        
+    </table>
+    <h2 class="title--h2">Добавить студента</h2>
+    <form class="form" action="#">
+        <input id="input-surname" type="text" placeholder="Фамилия">
+        <input id="input-name" type="text" placeholder="Имя">
+        <input id="input-lastname" type="text" placeholder="Отчество">
+        <input id="input-bitrh" type="date" placeholder="Дата рождения">
+        <input id="input-start" type="number" min="1920" max="2024" placeholder="Год начала обучения">
+        <input id="input-faculty" type="text" placeholder="Факультет">
+        <button class="add btn-reset">Добавить студента</button>
+    </form>
+   </div>
+</body>
+
+</html>

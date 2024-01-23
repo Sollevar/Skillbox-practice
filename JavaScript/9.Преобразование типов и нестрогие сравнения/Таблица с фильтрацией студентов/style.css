@@ -1,0 +1,91 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding-bottom: 50px;
+}
+
+.form input{
+    padding: 14px 24px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.form input:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.add{
+    padding: 10px 15px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: aquamarine;
+    transition: transform 0.3s ease-in-out;
+}
+
+.add:hover{
+    transform: scale(1.2);
+}
+
+.sort-btns{
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.sort-btns button:not(:last-child){
+    margin-right: 30px;
+}
+
+.form-filter input{
+    padding: 14px 24px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.form-filter input:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.title--h2{
+    margin: 0;
+    margin-bottom: 30px;
+}
