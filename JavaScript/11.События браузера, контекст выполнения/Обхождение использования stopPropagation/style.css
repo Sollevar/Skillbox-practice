@@ -1,0 +1,37 @@
+.drop-btn{
+    margin-bottom: 30px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: blue;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.drop-btn:hover{
+    background-color: rgb(10, 10, 112);
+}
+
+.drop-btn:active{
+    background-color: rgb(19, 147, 179);
+}
+
+.block{
+    padding: 10px;
+    display: none;
+    border: 1px solid red;
+    max-width: 300px;
+}
+
+.block__title{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.block__descr{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
