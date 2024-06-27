@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Каталог товаров</h1>
+    <a href="cart.html" class="link">Перейти в корзину</a>
+    <div>Товаров в корзине: <span id="cart-quantity">0</span></div>
+    <div class="products">
+        <div class="product">
+            <p class="name">Товар 1</p>
+            <span class="price">200</span>
+            <button onclick="addToCart(1, 'Товар 1', 200)">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <p class="name">Товар 2</p>
+            <span class="price">500</span>
+            <button onclick="addToCart(2, 'Товар 2', 500)">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <p class="name">Товар 3</p>
+            <span class="price">1200</span>
+            <button onclick="addToCart(3, 'Товар 3', 1200)">Добавить в корзину</button>
+        </div>
+    </div>
+    <script>
+        function updateCartQuantity() {
+            const items = cartLS.list();
+            const totalQuantity = items.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-quantity').innerText = totalQuantity;
+        }
+
+        function addToCart(id, name, price) {
+            cartLS.add({id, name, price});
+            updateCartQuantity();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartQuantity);
+        cartLS.onChange(updateCartQuantity);
+    </script>
+</body>
+</html>

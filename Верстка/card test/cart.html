@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <a href="index.html" class="link">Перейти в каталог</a>
+    <h1>Корзина</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Название товара</th>
+            <th>Цена</th>
+            <th>Количество</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="cart"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">Общая сумма: <strong class="total"></strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    <script>
+        function renderCart(items) {
+            const $cart = document.querySelector(".cart");
+            const $total = document.querySelector(".total");
+           
+
+            $cart.innerHTML = items.map((item) => {
+               
+                return `
+                    <tr>
+                        <td>#${item.id}</td>
+                        <td>${item.name}</td>
+                        <td>${item.quantity}</td>
+                        <td><button onclick="cartLS.quantity(${item.id}, 1)">+</button></td>
+                        <td><button onclick="cartLS.quantity(${item.id}, -1)">-</button></td>
+                        <td><button onclick="cartLS.remove(${item.id})">Удалить</button></td>
+                    </tr>`;
+            }).join("");
+            $total.innerText = "рубли " + cartLS.total();
+        }
+
+        function updateCart() {
+            renderCart(cartLS.list());
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCart);
+        window.addEventListener('storage', updateCart);
+        cartLS.onChange(updateCart);
+    </script>
+</body>
+</html>
