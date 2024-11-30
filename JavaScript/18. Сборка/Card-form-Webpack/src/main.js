@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import { el, setChildren } from "redom";
 import Inputmask from "inputmask";
 import valid from 'card-validator';

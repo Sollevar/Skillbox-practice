@@ -1,66 +1,62 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-module.exports = {
-    entry: './src/main.js',
-    output: {
-        publicPath: '/',
-        filename: 'main[contenthash].js'
-    },
-    module: {
-        rules: [{
-                test: /\.(jpe?g|png|gif|svg)$/i,
-                type: "asset",
-            },
-            {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
-        ]
-    },
-    optimization: {
-        minimizer: [
-            "...",
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+module.exports = (env) => (
+    {
+        entry: './src/main.js',
+        output: {
+            filename: 'main[contenthash].js',
+            publicPath: '/',
+            clean: true,
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    type: "asset",
+                },
+                {
+                    test: /\.css$/i,
+                    use: [ env.prod ? MiniCssExtractPlugin.loader :'style-loader', 'css-loader'],
+                },
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    use: {
+                      loader: 'babel-loader',
+                      options: {
+                        targets: "defaults",
+                        presets: [
+                          ['@babel/preset-env']
+                        ]
+                      }
+                    }
+                  }
+            ]
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                title:'Форма оплаты'
+            }),
+            new MiniCssExtractPlugin({
+                filename:'main[contenthash].css'
+            }),
             new ImageMinimizerPlugin({
                 minimizer: {
                     implementation: ImageMinimizerPlugin.imageminMinify,
                     options: {
-                        // Lossless optimization with custom option
-                        // Feel free to experiment with options for better result for you
                         plugins: [
-                            ["gifsicle", { optimizationLevel: 5 }],
-                            ["jpegtran", { optimizationLevel: 5 }],
-                            ["optipng", { optimizationLevel: 5 }],
-                            // Svgo configuration here https://github.com/svg/svgo#configuration
-                            [
-                                "svgo",
-                                {
-                                    plugins: [{
-                                        name: "preset-default",
-                                        params: {
-                                            overrides: {
-                                                removeViewBox: false,
-                                                addAttributesToSVGElement: {
-                                                    params: {
-                                                        attributes: [
-                                                            { xmlns: "http://www.w3.org/2000/svg" },
-                                                        ],
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    }, ],
-                                },
-                            ],
+                            ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
+                            ['mozjpeg', { quality: 75 }], // Для JPG и JPEG
+                            ['optipng', { optimizationLevel: 5 }], // Для PNG
+                            ['svgo', { plugins: [{ removeViewBox: false }] }], // Для SVG
                         ],
                     },
                 },
             }),
         ],
-    },
-    plugins: [
-        new HtmlWebpackPlugin(),
-    ],
-    devServer: {
-        hot: true,
+        devServer: {
+            hot: true,
+        }
     }
-}
+) 
