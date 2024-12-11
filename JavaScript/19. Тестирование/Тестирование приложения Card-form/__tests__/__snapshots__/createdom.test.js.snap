@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Создание формы банковской карты 1`] = `
+<body>
+  <div
+    class="circles"
+  >
+    <div
+      class="circle circle-1"
+    />
+    <div
+      class="circle circle-2"
+    />
+  </div>
+  <div
+    class="card-group"
+  >
+    <form
+      class="card"
+    >
+      <label
+        class="cvc"
+      >
+        <span>
+          CVC:
+        </span>
+        <input
+          placeholder="enter cvc"
+          type="text"
+        />
+      </label>
+      <div
+        class="logo"
+      >
+        Type
+      </div>
+      <div
+        class="chip"
+      >
+        <img
+          alt="chip"
+          src="https://raw.githubusercontent.com/dasShounak/freeUseImages/main/chip.png"
+        />
+      </div>
+      <input
+        class="number"
+        placeholder="Enter card number"
+        type="text"
+      />
+      <input
+        class="email"
+        placeholder="Enter email"
+        type="email"
+      />
+      <input
+        class="to"
+        type="text"
+      />
+    </form>
+    <button
+      class="btn-send"
+      disabled=""
+      style="background-image: url(mocked-image-path);"
+    >
+      Pay
+    </button>
+  </div>
+</body>
+`;
