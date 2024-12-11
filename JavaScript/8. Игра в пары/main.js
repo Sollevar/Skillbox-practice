@@ -21,13 +21,13 @@ function shuffle(arr) {
 
 // Этап 3. Используйте две созданные функции для создания массива перемешанными номерами. На основе этого массива вы можете создать DOM-элементы карточек. У каждой карточки будет свой номер из массива произвольных чисел. Вы также можете создать для этого специальную функцию. count - количество пар.
 
-function startGame(count, grid) {
+function startGame(count) {
   const mainArray = createNumbersArray(count);
   const shuffleArray = shuffle(mainArray);
 
   let container = document.createElement("div");
   container.classList.add("container");
-  container.style = `grid-template-columns: repeat(${grid}, 1fr);`
+  container.style = `grid-template-columns: repeat(4, 1fr);`
   document.body.append(container);
   createCard(shuffleArray);
 
@@ -147,13 +147,13 @@ function ControllGame() {
   btnStart.classList.add("btn-start", "btn-reset");
   controllContainer.append(btnStart);
 
-  let horizontalNumber = 4;
+  let horizontalNumber = 2;
   let verticalNumber = 4;
 
   horizontal.addEventListener("input", () => {
     horizontalNumber = horizontal.value;
     if (horizontalNumber < 2 || horizontalNumber > 10 || horizontalNumber % 2 === 1 ) {
-      horizontalNumber = 4;
+      horizontalNumber = 2;
     } 
       
   }); 
@@ -168,7 +168,7 @@ function ControllGame() {
 
   btnStart.addEventListener('click', () => {
     controllContainer.remove();
-    startGame(horizontalNumber * verticalNumber, horizontalNumber);
+    startGame(horizontalNumber * verticalNumber);
   })
 }
 
